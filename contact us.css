@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* Apply a background to the entire page */
+  .back {
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    background-size: cover;
+   
+  }
+  body{
+    background-color: rgb(0, 0, 0);
+    overflow-x: auto;
+  }
+  /* Center the content vertically and horizontally */
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+  .logo {
+    width: 120px;
+    cursor: pointer;
+  }
+  
+  /* Style the navigation bar */
+  .navbar {
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  
+  /* Style the navigation menu items */
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: blanchedalmond;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(198, 198, 218);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .navbar ul li:hover a {
+    text-shadow: 0 0 40px rgba(1000, 1000, 1000, 15.8);
+  }
+  
+  .navbar ul li {
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar ul li:hover {
+    transform: translateY(-5px);
+  }
+  /* Basic CSS for the card container */
+/* Basic CSS for the card container */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and style to the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the page title */
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color:aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Style the image links */
+.image-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Style the individual images */
+.image-links a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.image-links a:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); /* Add a blue glow effect on hover */
+}
+
+.image-links img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}

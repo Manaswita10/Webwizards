@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+.logo {
+    width: 120px;
+    cursor: pointer;
+  }
+body{
+  background-color: rgb(0, 0, 0);
+  overflow-x: auto;
+}
+.back {
+  width: 100%;
+  height: 100vh;
+  background-color:  rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  
+  /* Style the navigation menu items */
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: blanchedalmond;
+    text-transform: uppercase;
+  }
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(198, 198, 218);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .navbar ul li:hover a {
+    text-shadow: 0 0 40px rgba(1000, 1000, 1000, 15.8);
+  }
+  
+  .navbar ul li {
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar ul li:hover {
+    transform: translateY(-5px);
+  }
+.qu{
+  position: absolute; /* Position the element absolutely within the page */
+  left: 20px; /* Adjust the left position as needed */
+  top: -90px; /* Adjust the top position to control the downward placement */
+}
+.qu h1{
+  font-size: 60px;
+  color:rgb(138, 43, 226);
+  font-style: italic;
+}
+.number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 33.33%; /* Divide the width into three equal parts for left, middle, and right */
+    top: 35%;
+    transform: translateY(-50%);
+}
+.faq-header{
+  color:rgb(138, 43, 226);
+  font-size: 60px;
+  
+
+}
+.faq-header pre{
+  font-size: 20px;
+  color:rgb(173, 255, 47);
+}
+.faq-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color:rgb(173, 255, 47);
+  
+}
+.faq-container {
+  position: absolute;
+  left: 0;
+  top: 75%; /* Adjust this value to control the vertical position */
+  transform: translateY(-50%);
+  padding: 20px; /* Optional padding for the FAQ container */
+  border-radius: 5px; /* Optional border radius for the FAQ container */
+}
+/* Style for questions and dropdown button */
+.question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-btn {
+  font-size: 20px;
+}
+
+/* Style for hidden answers */
+.answer {
+  display: none;
+
+  
+}
+/* Styles for the scrolling number */
+.number {
+    font-size: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 10px; /* Adjust the margin to separate number and text */
+    color: rgb(138, 43, 226);
+    text-shadow: 0 0 10px rgba(154, 83, 187, 89.8);
+    font-weight: bolder;
+}
+
+.scrolling-number {
+    animation: scroll 5s linear infinite;
+}
+
+.text {
+    font-size: 30px; /* Adjust the font size as needed */
+    color: rgb(173, 255, 47);
+    text-shadow: 0 0 10px rgba(173, 255, 47, 89.8);
+}
+
+/* Additional styles for positioning */
+.left {
+    left: 0;
+}
+
+.middle {
+    left: 33.33%;
+}
+
+.right {
+    right: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.designation-cards-container {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: auto;
+  max-width: 200px; /* Adjust the maximum width of the container */
+  max-height: 900px; /* Adjust the maximum height of the container */
+  overflow-y: auto; /* Allow scrolling within the fixed height */
+  background-color: rgba(240, 240, 240, 0.9);
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange cards in a vertical column */
+  align-items: flex-end; /* Align the cards to the right side */
+  padding: 10px; /* Add padding */
+  
+}
+
+/* Styles for individual cards */
+/* Add a transition effect to the cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 90px;
+  text-align: center;
+  max-width: 180px;
+  margin-left: auto; /* Move cards to the right side */
+  max-height: 90px;
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+
+/* When a card is hovered, apply a transform to move it slightly */
+.card:hover {
+  transform: translateY(-10px); /* Move the card 5 pixels upwards when hovered */
+}
+
+.card img {
+  width: 180px;
+  height: 170px;
+  margin-bottom: 5px;
+  margin-top: -80px;
+  margin-left: -200px;
+  
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+
+/* Apply margin to the individual cards */
+.card:nth-child(1) {
+    margin-top: 180px; /* Adjust the margin-top for the first card */
+    margin-right: 400px;
+    background-color: rgb(138, 43, 226,20.5) ;
+    
+}
+
+.card:nth-child(2) {
+    margin-top: -215px; /* Adjust the margin-top for the second card */
+    background-color:rgb(173, 255, 47, 20.5);
+    margin-right: 20px;
+    overflow:auto;
+}
+
+.card:nth-child(3) {
+    margin-top: -18px; /* Adjust the margin-top for the third card */
+    margin-right: 400px;
+    overflow:auto;
+    background-color:rgb(173, 255, 47, 20.5);
+}
+
+.card:nth-child(4) {
+    margin-top: -200px; /* Adjust the margin-top for the fourth card */
+    margin-right: 20px;
+    overflow:auto;
+    background-color: rgb(138, 43, 226,20.5);
+}
+.card:nth-child(4) img {
+    margin-left: -140px}
+.card:nth-child(3) img {
+  margin-top:-80px;}
+  .scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #007BFF; /* Background color of the circle */
+    color: #fff; /* Color of the arrow icon */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    font-size: 44px; /* Adjust the size of the arrow */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  }
+  
+  .scroll-to-top-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Styles for the modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Styles for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.review-container {
+  position: absolute;
+  left: 0;
+  top: 100%; /* Adjust the top position to move it below existing content */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  width: 50%; /* Set the width of the review container */
+  margin-top: 20px; /* Adjust the margin-top to create spacing between content and review cards */
+}
+.review-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 150px;
+}
+.review-card-1{
+  background-color:  rgb(138, 43, 226);
+}
+.review-card-2{
+  background-color:  rgb(138, 43, 226);
+}
+.review-card-3{
+  background-color:  rgb(138, 43, 226);
+}
+.review-content {
+  flex-grow: 1;
+}
+.review-card img{
+  max-width: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.review-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.review-info p {
+  font-size: 14px;
+  color: #555;
+}
+.rating {
+  color: #f0c419; /* Default star color (yellow) */
+  font-size: 24px; /* Adjust the size of the stars */
+}
+
+/* Style for the filled stars */
+.rating .star.filled {
+  color: #f0c419; /* Yellow color for filled stars */
+}
+
+/* Style for the half-filled stars */
+.rating .star.half-filled {
+  color: #f0c419; /* Yellow color for half-filled stars */
+  position: relative;
+  display: inline-block;
+}
+
+.rating .star.half-filled::before {
+  content: '\2605'; /* Unicode character for a half-filled star */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Style for the unfilled stars */
+.rating .star.unfilled {
+  color: #000; /* Black color for unfilled stars */
+}
+/* Style for the review input section */
+.review-input-section {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: -900px; /* Adjust this value to control the vertical position */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+}
+
+.review-input-section h3 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: rgb(173, 255, 47);
+
+}
+
+.review-input {
+  width: 60%;
+  padding: 10px;
+  border: 3px solid rgb(138, 43, 226);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #ffffff;
+}
+
+.review-input::placeholder {
+  color: #aaa;
+}
+
+/* Style for the submit button */
+#submit-review {
+  width: 40%;
+  padding: 10px 20px;
+  background-color: rgb(173, 255, 47);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#submit-review:hover {
+  background-color: rgb(178, 224, 109);
+}
+.text-element {
+  
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 20px; /* Adjust the margin as needed to position it beside the review cards */
+  width: 300px; /* Adjust the width as needed */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top:-600px; /* Adjust this value to move it upward */
+  /* Position the text element 20px above its original position */
+ margin-left: 600px;
+ margin-top: -500px;
+  top: -20px;
+}
+
+.text-element h3 {
+  font-size: 150px;
+  margin-bottom: 5px;
+  color: rgb(138, 43, 226);
+  text-decoration: line-through;
+ margin-left: 20px;
+ text-shadow: 0 0 10px rgba(154, 83, 187, 89.8);
+ 
+}
+
+.grow-text {
+  color: rgb(173, 255, 47);
+  font-size: 200px; /* Change the font size to your preferred size */
+  padding-bottom: 5px;
+  text-shadow: 0 0 10px rgba(173, 255, 47, 89.8);
+}
+.on-text{
+  color:rgb(173, 255, 47);
+  font-size: 200px;
+  text-shadow: 0 0 10px rgba(173, 255, 47, 89.8);
+}

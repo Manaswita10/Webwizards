@@ -1,0 +1,238 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Apply a background to the entire page */
+.back {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(background.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Center the content vertically and horizontally */
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust the width to control the size of the overlay */
+  height: 50%; /* Adjust the height to control the size of the overlay */
+  background: linear-gradient(to bottom right, rgba(255, 253, 253, 0.3) 0%, transparent 100%);
+  z-index: 1;
+  transform-origin: 0 0; /* Set the transform origin to the top left corner */
+  transform: skewY(10deg);
+  pointer-events: none;
+}
+.back::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%; /* Adjust the width to control the size of the overlay */
+  height: 50%; /* Adjust the height to control the size of the overlay */
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+  z-index: 1;
+  transform-origin: 100% 100%; /* Set the transform origin to the bottom right corner */
+  transform: skewY(10deg);
+  pointer-events: none;
+}
+
+
+
+
+#welcomeButton {
+    position: relative;
+    background-color: rgb(235, 217, 217);
+    color: black;
+    padding: 25px 70px; /* Adjust padding to fit the text and arrow */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; /* Add padding to the transition */
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center; /* Center the arrow vertically */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: larger;
+    border:black;
+}
+#welcomeButton:hover {
+    background-color: black;
+    color: rgb(235, 217, 217);
+    padding: 15px 60px; /* Adjust the padding when hovered to elongate the button */
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Style the navigation bar */
+.navbar {
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+/* Style the navigation menu items */
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: blanchedalmond;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: rgb(198, 198, 218);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.navbar ul li:hover a {
+  text-shadow: 0 0 40px rgba(1000, 1000, 1000, 15.8);
+}
+
+.navbar ul li {
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li:hover {
+  transform: translateY(-5px);
+}
+
+/* Style the quote section */
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  height: 50%;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Keyframe animations for the typing effect */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+      border-right: .15em solid transparent;
+  }
+  50% {
+      border-right: .15em solid rgb(243, 237, 226);
+  }
+}
+
+/* Style the typing effect text */
+.quote h1::before {
+  content: "WELCOME TO WEB WIZARDS.";
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  transform: translateX(40px);
+  padding-left: 0;
+  letter-spacing: .15em;
+  width: 100%;
+  animation: typing 2.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
+  display: inline-block;
+  vertical-align: text-top;
+  position: relative;
+}
+
+/* Style the blinking cursor */
+.quote h1::after {
+  content: "";
+  border-right: .15em solid rgb(243, 237, 226);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  animation: blink-caret .75s step-end infinite;
+}
+
+/* Style the image container */
+.image-container {
+  position: absolute;
+  bottom: 0;
+  right: 250px;
+  transform: translateX(50%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Style the smaller image */
+.image-container img {
+  max-width: 65%;
+  height: auto;
+  display: block;
+}
+
+/* Add a hover effect to the image container */
+.image-container:hover {
+  transform: translateX(50%) translateY(-5px);
+}
+
+/* Style the circle cursor */
+.circle-cursor {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(237, 231, 230, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Add styles for the cursor overlay */
+.cursor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+}
